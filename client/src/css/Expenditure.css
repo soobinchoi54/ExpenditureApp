@@ -1,0 +1,59 @@
+.AddExpenditure {
+  display: inline-flex;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+}
+
+.expenditure {
+  margin-top: 5%;
+  margin-left: 30px;
+  float: center;
+}
+
+label {
+  color: #aa5c70;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-left: 10px;
+}
+
+input {
+  color: #aa5c70;
+  font-family: "Source Sans Pro", sans-serif;
+  border-color: #dacbce;
+  border-style: solid;
+  padding: 8px;
+  border-radius: 0.2rem;
+  margin-left: 8px;
+}
+
+.expenditure select {
+  padding: 10px;
+  margin-left: 8px;
+  width: 60%;
+  color: #aa5c70;
+  font-family: "Source Sans Pro", sans-serif;
+  border-color: #dacbce;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.2rem;
+}
+
+option {
+  color: #aa5c70;
+  font-family: "Source Sans Pro", sans-serif;
+  border-color: #dacbce;
+}
+
+button {
+  background-color: #dacbce;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 10px;
+  margin-left: 8px;
+  color: #aa5c70;
+  font-family: "Source Sans Pro", sans-serif;
+}

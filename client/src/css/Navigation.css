@@ -1,0 +1,32 @@
+.Nav {
+  background-color: #cc8899;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding-left: 30px;
+  z-index: auto
+}
+
+.NavLink {
+  float: left;
+  padding-right: 4vh;
+  padding-left: 4vh;
+  padding-top: 4vh;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.NavLink:hover {
+  color: #dacbce;
+}
+
+.NavLink:active {
+  color: #66474d;
+}
+
+i {
+  padding-right: 10px;
+}
