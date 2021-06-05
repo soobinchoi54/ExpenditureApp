@@ -1,5 +1,5 @@
 .AddExpenditure {
-  display: inline-flex;
+  display: flex;
   position: absolute;
   left: 0;
   top: 100px;
@@ -12,6 +12,8 @@
   margin-top: 5%;
   margin-left: 30px;
   float: center;
+  height: 30vh;
+  position: relative;
 }
 
 label {
@@ -28,6 +30,10 @@ input {
   padding: 8px;
   border-radius: 0.2rem;
   margin-left: 8px;
+}
+
+option:selection {
+  display: none;
 }
 
 .expenditure select {
@@ -56,4 +62,15 @@ button {
   margin-left: 8px;
   color: #aa5c70;
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.GIF-container {
+  visibility: visible;
+  position: absolute;
+  flex-direction: column;
+  margin-top: 30vh;
+  margin-left: -40vh;
+  vertical-align: middle;
+  width: 40px;
+  background-color: aqua;
 }

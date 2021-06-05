@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#subcategory").find("optgroup").hide(); // initialize
+        $("#category").change(function () {
+          var $cat = $(this).find("option:selected");
+          var $subCat = $("#subcategory").find("." + $cat.attr("class"));
+          $("#subcategory")
+            .find("optgroup")
+            .not("'" + $cat.attr("class") + "'")
+            .hide(); // hide other optgroup
+          $subCat.show();
+          $subCat.find("option").first().attr("selected", "selected");
+        });
+      });
+    </script>
+    <title>Expenditure App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
