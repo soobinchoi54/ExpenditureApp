@@ -1,6 +1,7 @@
 import Axios from "axios";
 import { useState } from "react";
-import './css/Transactions.css';
+import "./css/Transactions.css";
+import resetForms from "./FormHandler";
 
 function Transactions() {
   const [transactionList, setTransaction] = useState([]);
@@ -29,7 +30,9 @@ function Transactions() {
     }).then((response) => {
       console.log("Update");
     });
+    resetForms("update-transactions")
   };
+
   const formatDate = (date) => {
     let d = new Date(date).toDateString();
     return d;
@@ -50,24 +53,27 @@ function Transactions() {
   return (
     <div className="Transactions">
       <button onClick={getTransactions}>Show Transactions</button>
+     
       {transactionList.map((val, key) => {
         return (
           <div className="transactions">
-            <table>
+             <form id="update-transactions">
+             <table>
               <tbody>
-                <tr className='rows'>
+                <tr className="rows">
                   <td>{formatDate(val.date)}</td>
                   <td>{val.description}</td>
                   <td>{formatCategory(val.category)}</td>
                   <td>{formatCategory(val.subcategory)}</td>
                   <td>{val.amount}</td>
                   <td>
-                    <input
-                      type="text"
-                      onChange={(event) => {
-                        setNewAmount(event.target.value);
-                      }}
-                    ></input>
+                      <input
+                        type="text"
+          
+                        onChange={(event) => {
+                          setNewAmount(event.target.value);
+                        }}
+                      ></input>
                   </td>
                   <td>
                     <button
@@ -92,6 +98,7 @@ function Transactions() {
                 </tr>
               </tbody>
             </table>
+             </form>
           </div>
         );
       })}

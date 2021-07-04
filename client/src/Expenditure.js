@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Axios from "axios";
 import "./css/Expenditure.css";
-import gif from './img/money.gif'
+import gif from './img/money.gif';
+import resetForms from "./FormHandler";
 
 function Expenditure() {
   const [date, setDate] = useState(new Date());
@@ -33,11 +34,7 @@ function Expenditure() {
       ]);
       console.log("Success");
     });
-    resetFields();
-  };
-
-  const resetFields = () => {
-    document.getElementsByClassName("expenditure-form").reset();
+    resetForms("expenditure-form");
   };
 
   const getAmountInOrOut = (amount, category) => {
