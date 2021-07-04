@@ -30,7 +30,7 @@ function Transactions() {
     }).then((response) => {
       console.log("Update");
     });
-    resetForms("update-transactions")
+    resetForms("update-transactions");
   };
 
   const formatDate = (date) => {
@@ -53,52 +53,68 @@ function Transactions() {
   return (
     <div className="Transactions">
       <button onClick={getTransactions}>Show Transactions</button>
-     
       {transactionList.map((val, key) => {
         return (
           <div className="transactions" key={val.id}>
-             <form id="update-transactions">
-             <table>
-              <tbody>
-                <tr className="rows">
-                  <td>{formatDate(val.date)}</td>
-                  <td>{val.description}</td>
-                  <td>{formatCategory(val.category)}</td>
-                  <td>{formatCategory(val.subcategory)}</td>
-                  <td>{val.amount}</td>
-                  <td>
-                      <input
-                        type="text"
-          
-                        onChange={(event) => {
-                          setNewAmount(event.target.value);
-                        }}
-                      ></input>
-                  </td>
-                  <td>
-                    <button
-                      className="delete"
-                      onClick={() => {
-                        deleteTransaction(val.id);
-                      }}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                  <td>
-                    <button
-                      className="update"
-                      onClick={() => {
-                        updateTransactionAmount(val.id);
-                      }}
-                    >
-                      Update
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-             </form>
+            <form id="update-transactions">
+              <div className="currentData">
+                <table>
+                  <tbody>
+                    <tr className="rows">
+                      <td>{formatDate(val.date)}</td>
+                      <td>{val.description}</td>
+                      <td>{formatCategory(val.category)}</td>
+                      <td>{formatCategory(val.subcategory)}</td>
+                      <td>{val.amount}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="displayFormUpdate">
+                <button>Update</button>
+              </div>
+
+              <div className="updateData">
+                <table>
+                  <tbody>
+                    <tr className="rows">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <input
+                          type="text"
+                          onChange={(event) => {
+                            setNewAmount(event.target.value);
+                          }}
+                        ></input>
+                      </td>
+                      <td>
+                        <button
+                          className="deleteBtn"
+                          onClick={() => {
+                            deleteTransaction(val.id);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          className="updateBtn"
+                          onClick={() => {
+                            updateTransactionAmount(val.id);
+                          }}
+                        >
+                          Update
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
           </div>
         );
       })}

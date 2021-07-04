@@ -1,4 +1,3 @@
-
 .Transactions {
   flex-direction: column;
   align-items: center;
@@ -12,17 +11,14 @@
 }
 
 .transactions {
-margin: auto;
-}
-.transaction {
-  width: 100%;
-  overflow: auto;
-  height: px;
+  margin: auto;
+  display: block;
+  width: 70%;
 }
 
 table {
   table-layout: fixed;
-  width: 90%;
+  width: 80%;
   left: 10vh;
 }
 
@@ -31,24 +27,45 @@ td {
 }
 
 table tr :nth-child(even) {
-    color: #b9818f;
-  }
+  color: #b9818f;
+}
 .date {
-    width: 180px;
-  }
-  
-  .description {
-    width: 200px;
-  }
-  
-  #category {
-    width: 200px;
-  }
-  
-  #subcategory {
-    width: 200px;
-  }
-  
-  .amount {
-    width: 100px;
-  }
+  width: 180px;
+}
+
+.description {
+  width: 200px;
+}
+
+#category {
+  width: 200px;
+}
+
+#subcategory {
+  width: 200px;
+}
+
+.amount {
+  width: 100px;
+}
+
+.currentData {
+  display: inline-block;
+  width: 80%;
+}
+
+.displayFormUpdate {
+  display: none;
+}
+
+.currentData:hover + .displayFormUpdate {
+  display: inline-block;
+}
+
+.displayFormUpdate:hover {
+  display:inline-block;
+}
+
+.updateData {
+  display: none;
+}
