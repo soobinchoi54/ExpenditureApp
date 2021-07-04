@@ -56,7 +56,7 @@ function Transactions() {
      
       {transactionList.map((val, key) => {
         return (
-          <div className="transactions">
+          <div className="transactions" key={val.id}>
              <form id="update-transactions">
              <table>
               <tbody>
