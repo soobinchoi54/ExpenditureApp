@@ -1,6 +1,6 @@
 # ExpenditureApp
 
-A work in progress web app using React, Axios, and MySQL that works as an expenditure tracker 
+A web app made for fun using React, Axios, and MySQL that works as an expenditure tracker 
 
 ### Front-End React 
 <img width="1364" alt="Screen Shot 2021-06-05 at 3 08 28 PM" src="https://user-images.githubusercontent.com/41706004/120906632-f01a5a00-c60f-11eb-9f4b-10b7773a18f8.png">
